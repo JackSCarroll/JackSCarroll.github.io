@@ -10,28 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="left-nav">
-                <h1>
-                    <a class="active" href="/">
-                        ~/
-                        <span class="first-name">Jack</span>
-                        <span class="blink">_</span>
-                    </a>
-                </h1>
-            </div>
-            <div class="right-nav">
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
     <main>
-        <div>
-            
+        <div class="main-container">
+            <div class="main-content">
+                <h3>
+                    ~/
+                    <span class="first-name">Jack</span>
+                </h3>
+                <p>
+                    Hi there, my name is Jack.
+                    I recently graduated with a Bachelor's in Computer Science from Deakin University.
+                    I'm an aspiring full-stack developer with a passion for creating and developing web applications.
+                    I'm always looking for new opportunities to learn and grow as a developer.
+                </p>
+                <p>
+                    Type the number for the page you'd like to see :)
+                </p>
+
+                <a class="nav-link" href="#projects">1. Projects</a>
+                <a class="nav-link" href="#about">2. About</a>
+                <a class="nav-link" href="#contact">3. Contact</a>
+            </div>
+            <nav class="nav-bar">
+                <div class="left-nav">
+                    <h1>
+                        <a id="userInput" class="active" href="/">
+                            ~/
+                            <span id="inputText"></span>
+                            <span class="blink">_</span>
+                        </a>
+                    </h1>
+                </div>
+            </nav>
         </div>
     </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
