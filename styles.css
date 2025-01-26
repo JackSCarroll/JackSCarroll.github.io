@@ -58,7 +58,7 @@ body {
     padding: 0;
     text-align: left;
     background-attachment: fixed;
-    background-color: #fbf4ff;
+    background-color: hsl(203, 8%, 34%);
     min-height: 100vh;
     justify-content: center;
     display: flex;
@@ -80,23 +80,30 @@ a {
 
 p {
     font-size: 1.2em;
-    line-height: 1.5em;
+    line-height: 1em;
 }
 
-.main-container {
+.parallax-container{
+  min-width: 900px;
+  min-height: 450px;
+}
+
+.main-console-container {
     margin: 0;
     padding: 0 1em;
     background: #1f2b37;
     color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-bottom: 5px solid #fcdf59;
+    border-radius: 24px;
 }
 
-.main-content {
+.console-content {
+    height: 350px;
     padding: 1em;
 }
 
-.main-content a {
+.console-content a {
     color: #fcdf59;
     display: block;
     padding: 12px;
@@ -153,6 +160,7 @@ p {
 
 /* Keyframes */
 
+/* Blinker animation */
 @keyframes blinker {
     0% {
         opacity: 1;
@@ -167,3 +175,37 @@ p {
         opacity: 0;
     }
 }
+
+/* Error Shake */
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+  
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+.apply-shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+  
