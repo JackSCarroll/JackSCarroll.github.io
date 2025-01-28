@@ -9,39 +9,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
     <main>
         <div id="parallax-container" class="parallax-container">
-            <div id="main-console-container" class="main-console-container">
-                <div id="console-content" class="console-content">
-                    <h3>
-                        ~/
-                        <span class="first-name">Jack</span>
-                    </h3>
-                    <p>Hi there, my name is Jack.
-                    I recently graduated with a Bachelor's in Computer Science from Deakin University.
-                    I'm an aspiring full-stack developer with a passion for creating and developing web applications.
-                    I'm always looking for new opportunities to learn and grow as a developer.</p>
-                    <p>
-                        Type the number for the page you'd like to see :)
-                    </p>
-    
-                    <a class="nav-link" href="projects.html">1. Projects</a>
-                    <a class="nav-link" href="#about">2. About</a>
-                    <a class="nav-link" href="#contact">3. Contact</a>
-                </div>
-                <nav class="nav-bar">
-                    <div class="left-nav">
-                        <h1>
-                            <a id="userInput" class="active" href="/">
-                                ~/
-                                <span id="inputText"></span>
-                                <span class="blink">_</span>
-                            </a>
-                        </h1>
+            <header class="header-area">
+                <div class="container">
+                    <div class="name">
+                        <a class="first-name">Jack</a>
+                        <a class="last-name">Carroll</a>
                     </div>
-                </nav>
-            </div>
+                    <nav class="navbar">
+                        <ul id="menu-main-menu" class="menu">
+                            <li class="menu-item active">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="projects.html">Projects</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#about">About</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="spacer"></a>
+                </div>
+            </header>
         </div>
     </main>
     <script src="scripts.js"></script>
