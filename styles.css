@@ -58,7 +58,8 @@ body {
     padding: 0;
     text-align: left;
     background-attachment: fixed;
-    background-color: hsl(203, 8%, 34%);
+    background-image: linear-gradient(to right, rgba(38, 78, 220, 0.05) 2px, transparent 1px), linear-gradient(to bottom,rgba(38, 78, 220, 0.05) 2px, transparent 1px);
+    background-size: 30px 30px;
     min-height: 100vh;
     justify-content: center;
     display: flex;
@@ -86,6 +87,8 @@ p {
 .parallax-container{
   min-width: 900px;
   min-height: 450px;
+  animation: fadeIn 1.2s ease forwards;
+  transition: #f0f2f5 0.3s ease, color 0.3s ease;
 }
 
 .main-console-container {
@@ -206,6 +209,16 @@ p {
     }
     to {
         width: 100%;
+    }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
   
