@@ -64,7 +64,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    background-color: #313131;
+    background-color: #292a2e;
     animation: fadeIn 1.2s ease forwards;
     transition: #f0f2f5 0.3s ease, color 0.3s ease;
 }
@@ -85,7 +85,7 @@ ul {
 }
 
 .parallax-container{
-    background-color: #313131;
+    background-color: #22232e;
     background-image: linear-gradient(to right, rgba(224, 224, 224, 0.05) 2px, transparent 1px), linear-gradient(to bottom,rgba(224, 224, 224, 0.05) 2px, transparent 1px);
     background-size: 30px 30px;
     background-attachment: fixed;
@@ -103,12 +103,16 @@ main {
   z-index: 1;
 }
 
+.main-container {
+  height: 100vh;
+}
+
 .header-area {
-    background-color: #3d3d3d;
+    background-color: #292a38;
     border-bottom: 5px solid #fcdf59;
 }
 
-.container{
+.header-area .container{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -133,7 +137,7 @@ main {
 .last-name{
     font-size: 2em;
     font-weight: 700;
-    color: #f7f9fc;
+    color: #f8f8f4;
     margin: 0;
     padding: 0;
 }
@@ -164,7 +168,7 @@ main {
   font-weight: 500;
   display: block;
   padding: 26px 0;
-  color: #f7f9fc;
+  color: #f8f8f4;
 }
 
 .header-area .navbar .menu li.active a{
@@ -177,48 +181,70 @@ main {
 }
 
 .content {
-  padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.content .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1170px;
-    height: 100vh;
+.content .about-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "about about prosoc";
+    gap: 30px;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.content .about-container .project-social{
+  grid-area: prosoc;
+  display: grid;
+  grid-template-areas: 
+  "projects social";
+  gap: 0px 30px;
 }
 
 .widget {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 50px 46px;
-    margin: 20px 0;
     border-radius: 30px;
-    gap: 20px;
-    background-color: #3d3d3d;
+    gap: 30px;
+    background-color: #292a38;
     border-bottom: 5px solid #fcdf59;
 }
 
-.widget.about {
-  width: 50%;
-  position: relative;
+.widget .titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 1em;
+  gap: 10px;
 }
 
-.widget.about h1{
+.widget h1.title{
   font-size: 2em;
   font-weight: 400;
   color: #fcdf59;
 }
 
-.widget.about p{
+.widget h1.subtitle{
+  font-size: 1em;
+  font-weight: 300;
+  color: #5b5b66;
+}
+
+.widget p.content{
   font-size: 1em;
   font-weight: 400;
   line-height: 1.2em;
-  color: #f7f9fc;
+  color: #f8f8f4;
+}
+
+.widget.about {
+  grid-area: about;
 }
 
 .widget.about .image{
@@ -236,26 +262,56 @@ main {
   object-fit: cover;
 }
 
-.main-console-container {
-    margin: 0;
-    padding: 0 1em;
-    background: #1f2b37;
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-bottom: 5px solid #fcdf59;
-    border-radius: 24px;
+.widget.projects {
+  grid-area: projects;
+  flex-direction: column;
 }
 
-.console-content {
-    height: 350px;
-    padding: 1em;
+.project-social .image {
+  width: 145px;
+  height: 145px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px 0;
 }
 
-.console-content a {
-    color: #fcdf59;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
+.widget.projects .image .project.image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.widget.socials {
+  width: 100%;
+  grid-area: social;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 1170px) {
+  .content .about-container{
+    grid-template-areas: 
+    "about"
+    "prosoc";
+    gap: 20px, 30px;
+  }
+}
+
+@media (max-width: 778px) {
+  .widget.about{
+    flex-direction: column;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content .about-container .project-social {
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-areas: 
+    "projects"
+    "social";
+    gap: 30px;
+  }
 }
 
 /* Keyframes */
