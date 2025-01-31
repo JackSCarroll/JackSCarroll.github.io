@@ -188,13 +188,15 @@ main {
   padding: 12px 30px;
 }
 
-.content {
+.content-container {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.content .about-container{
+.content-container .about-container{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-areas: 
@@ -204,7 +206,7 @@ main {
     justify-content: center;
 }
 
-.content .about-container .project-contact{
+.content-container .about-container .project-contact{
   grid-area: prosoc;
   display: grid;
   grid-template-areas: 
@@ -289,9 +291,22 @@ main {
   border-radius: 30px 0;
 }
 
-.widget.projects .image .project.image{
-  width: 100%;
-  height: 100%;
+.widget.projects .icon {
+  background-color: var(--background-color);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.widget.projects .icon .project-icon {
+  width: 80px;
+  height: 80px;
   object-fit: cover;
 }
 
@@ -333,7 +348,7 @@ main {
 
 /* Responsive */
 @media (max-width: 1170px) {
-  .content .about-container{
+  .content-container .about-container{
     grid-template-areas: 
     "about"
     "prosoc";
@@ -349,7 +364,7 @@ main {
 }
 
 @media (max-width: 600px) {
-  .content .about-container .project-contact {
+  .content-container .about-container .project-contact {
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-areas: 
     "projects"
