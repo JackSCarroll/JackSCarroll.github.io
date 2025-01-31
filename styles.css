@@ -52,6 +52,14 @@
 
 /* ACTUAL STYLES */
 
+:root {
+  --background-color: #22232e;
+  --accent-color: #fcdf59;
+  --primary-color: #292a38;
+  --text-color: #f8f8f4;
+  --highlight-color: rgba(224, 224, 224, 0.05);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -64,7 +72,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    background-color: #292a2e;
+    background-color: var(--primary-color);
     animation: fadeIn 1.2s ease forwards;
     transition: #f0f2f5 0.3s ease, color 0.3s ease;
 }
@@ -85,8 +93,8 @@ ul {
 }
 
 .parallax-container{
-    background-color: #22232e;
-    background-image: linear-gradient(to right, rgba(224, 224, 224, 0.05) 2px, transparent 1px), linear-gradient(to bottom,rgba(224, 224, 224, 0.05) 2px, transparent 1px);
+    background-color: var(--background-color);
+    background-image: linear-gradient(to right, var(--highlight-color) 2px, transparent 1px), linear-gradient(to bottom, var(--highlight-color) 2px, transparent 1px);
     background-size: 30px 30px;
     background-attachment: fixed;
     background-position: center;
@@ -108,8 +116,8 @@ main {
 }
 
 .header-area {
-    background-color: #292a38;
-    border-bottom: 5px solid #fcdf59;
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--accent-color);
 }
 
 .header-area .container{
@@ -130,14 +138,14 @@ main {
 .first-name{
     font-size: 2em;
     font-weight: 700;
-    color: #fcdf59;
+    color: var(--accent-color);
     margin: 0;
     padding: 0;
 }
 .last-name{
     font-size: 2em;
     font-weight: 700;
-    color: #f8f8f4;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
@@ -168,11 +176,11 @@ main {
   font-weight: 500;
   display: block;
   padding: 26px 0;
-  color: #f8f8f4;
+  color: var(--text-color);
 }
 
 .header-area .navbar .menu li.active a{
-  color: #fcdf59;
+  color: var(--accent-color);
 }
 
 .spacer {
@@ -196,12 +204,18 @@ main {
     justify-content: center;
 }
 
-.content .about-container .project-social{
+.content .about-container .project-contact{
   grid-area: prosoc;
   display: grid;
   grid-template-areas: 
-  "projects social";
+  "projects contact";
   gap: 0px 30px;
+}
+
+.project-contact .yellow-and-contact{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .widget {
@@ -211,8 +225,8 @@ main {
     padding: 50px 46px;
     border-radius: 30px;
     gap: 30px;
-    background-color: #292a38;
-    border-bottom: 5px solid #fcdf59;
+    background-color: var(--primary-color);
+    border-bottom: 5px solid var(--accent-color);
 }
 
 .widget .titles {
@@ -227,7 +241,7 @@ main {
 .widget h1.title{
   font-size: 2em;
   font-weight: 400;
-  color: #fcdf59;
+  color: var(--accent-color);
 }
 
 .widget h1.subtitle{
@@ -240,7 +254,7 @@ main {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.2em;
-  color: #f8f8f4;
+  color: var(--text-color);
 }
 
 .widget.about {
@@ -267,7 +281,7 @@ main {
   flex-direction: column;
 }
 
-.project-social .image {
+.project-contact .image {
   width: 145px;
   height: 145px;
   position: relative;
@@ -281,10 +295,40 @@ main {
   object-fit: cover;
 }
 
-.widget.socials {
+.yellow-and-contact .yellow-rect{
   width: 100%;
-  grid-area: social;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+}
+
+.widget.contact {
+  width: 100%;
+  height: 236px;
+  justify-content: center;
+  align-items: center;
+  grid-area: contact;
   flex-direction: column;
+}
+
+.widget.contact .icon {
+  background-color: var(--background-color);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.widget.contact .icon .contact-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 
 /* Responsive */
@@ -305,11 +349,11 @@ main {
 }
 
 @media (max-width: 600px) {
-  .content .about-container .project-social {
+  .content .about-container .project-contact {
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-areas: 
     "projects"
-    "social";
+    "contact";
     gap: 30px;
   }
 }
