@@ -9,40 +9,110 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
+    <div id="parallax-container" class="parallax-container"></div>
     <main>
-        <div id="parallax-container" class="parallax-container">
-            <div id="main-console-container" class="main-console-container">
-                <div id="console-content" class="console-content">
-                    <h3>
-                        ~/
-                        <span class="first-name">Jack</span>
-                    </h3>
-                    <p>Hi there, my name is Jack.
-                    I recently graduated with a Bachelor's in Computer Science from Deakin University.
-                    I'm an aspiring full-stack developer with a passion for creating and developing web applications.
-                    I'm always looking for new opportunities to learn and grow as a developer.</p>
-                    <p>
-                        Type the number for the page you'd like to see :)
-                    </p>
-    
-                    <a class="nav-link" href="projects.html">1. Projects</a>
-                    <a class="nav-link" href="#about">2. About</a>
-                    <a class="nav-link" href="#contact">3. Contact</a>
-                </div>
-                <nav class="nav-bar">
-                    <div class="left-nav">
-                        <h1>
-                            <a id="userInput" class="active" href="/">
-                                ~/
-                                <span id="inputText"></span>
-                                <span class="blink">_</span>
-                            </a>
-                        </h1>
+            <div class="main-container">
+                <header class="header-area">
+                    <div class="container">
+                        <div class="name">
+                            <a class="first-name">Jack</a>
+                            <a class="last-name">Carroll</a>
+                        </div>
+                        <!-- MOBILE HEADER -->
+                        <div class="mobile-header">
+                            <div class="off-screen-menu">
+                               <ul id="menu-main-menu" class="menu">
+                                   <li class="menu-item active">
+                                       <a href="index.html">Home</a>
+                                   </li>
+                                   <li class="menu-item">
+                                       <a href="projects.html">Projects</a>
+                                   </li>
+                                   <li class="menu-item">
+                                       <a href="#about">About</a>
+                                   </li>
+                                   <li class="menu-item">
+                                       <a href="#contact">Contact</a>
+                                   </li>
+                               </ul>
+                            </div>
+                            <nav class="mobile-navbar">
+                               <div class="ham-menu">
+                                   <span></span>
+                                   <span></span>
+                                   <span></span>
+                               </div>
+                            </nav>
+                        </div>
+                        <!-- Desktop Navbar -->
+                        <nav class="navbar">
+                            <ul id="menu-main-menu" class="menu">
+                                <li class="menu-item active">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#about">About</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                </nav>
+                </header>
+
+                <!-- CONTENT -->
+                 <section class="content-container">
+                    <div class="about-container">
+                        <section id="about" class="widget about">
+                            <div class="image">
+                                <img class="me-image" src="images/me.jpg" alt="Jack Carroll">
+                            </div>
+                            <div class="infos">
+                                <h1 class="title">Jack Carroll</h1>
+                                <p class="content">I'm a fullstack developer with a recent Bachelor's degree in Computer Science, eager to build dynamic and innovative web applications that make a difference.</p>
+                                <a href="about.html" class="button">
+                                    <h1 class="subtitle">About Me</h1>
+                                </a>
+                            </div>
+                        </section>
+                        <div id="projects" class="project-contact">
+                            <section class="widget projects">
+                                <div class="icon">
+                                    <img class="project-icon" src="icons/tool.svg" alt="Tools Icon">
+                                </div>
+                                <div class="titles">
+                                    <h1 class="subtitle">Showcase</h1>
+                                    <h1 class="title">Projects</h1>
+                                </div>
+                            </section>
+                            <div class="yellow-and-contact">
+                                <div class="yellow-rect"></div>
+                                <section class="widget contact">
+                                    <div class="icon">
+                                        <a href="https://www.github.com/jackscarroll" target="_blank">
+                                            <img class="contact-icon" src="icons/github-mark-yellow.svg" alt="Github">
+                                        </a>
+                                        <a href="jackcarrollcontact@gmail.com" target="_blank">
+                                            <img class="contact-icon" src="icons/email.svg" alt="Email">
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/jack-carroll-079276217/" target="_blank">
+                                            <img class="contact-icon" src="icons/linkedin.svg" alt="Linkedin">
+                                        </a>
+                                    </div>
+                                    <div class="titles">
+                                        <h1 class="subtitle">Get in touch!</h1>
+                                        <h1 class="title">Contact</h1>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                 </section>
             </div>
-        </div>
     </main>
     <script src="scripts.js"></script>
 </body>
