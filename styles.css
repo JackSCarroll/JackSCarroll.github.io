@@ -276,7 +276,8 @@ main {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "about about prosoc";
+    "about about prosoc"
+    "toolkit toolkit toolkit";
     gap: 30px;
     max-width: 1200px;
     justify-content: center;
@@ -422,13 +423,89 @@ main {
   object-fit: cover;
 }
 
+.toolkit-container{
+  grid-area: toolkit;
+}
+
+.widget.toolkit {
+  padding: 20px 50px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.widget.toolkit .section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.widget.toolkit .section-header .titles {
+  align-items: flex-start;
+}
+
+.widget.toolkit .section-header .icon{
+  background-color: var(--background-color);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.widget.toolkit .section-header .icon .tool-icon{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.widget.toolkit .toolkit-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.widget.toolkit .toolkit-list .skill-group .skill {
+  display: flex;
+  padding: 2px;
+  align-items: center;
+  gap: 10px;
+}
+.widget.toolkit .toolkit-list .skill-group .skill h4{
+  font-size: 1.2em;
+  font-weight: 400;
+  line-break: strict;
+  color: var(--text-color);
+}
+
+.widget.toolkit .toolkit-list .svg-icon {
+  fill: var(--accent-color);
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
 /* Responsive */
 @media (max-width: 1170px) {
   .content-container .about-container{
     grid-template-areas: 
     "about"
-    "prosoc";
+    "prosoc"
+    "toolkit";
     gap: 20px, 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .widget.toolkit .toolkit-list .skill-group .skill h4{
+    font-size: 0.8em;
   }
 }
 
@@ -436,6 +513,9 @@ main {
   .widget.about{
     flex-direction: column;
     padding: 30px;
+  }
+  .widget.toolkit {
+    padding: 20px 40px;
   }
 }
 
@@ -455,6 +535,10 @@ main {
     "projects"
     "contact";
     gap: 30px;
+  }
+  .widget.toolkit {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
