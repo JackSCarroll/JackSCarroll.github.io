@@ -624,8 +624,6 @@ footer .container .copy-socials .copy{
   padding-left: 20px;
 }
 footer .container .socials {
-  grid-area: socials;
-  justify-self: start ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -689,6 +687,19 @@ footer .container .socials .icon{
   .widget.toolkit {
     flex-direction: column;
     align-items: center;
+  }
+  footer .container .navbar .menu {
+    gap: 30px;
+  }
+  footer .container .copy-socials {
+    flex-direction: column;
+  }
+  footer .container .copy-socials .socials{
+    padding-bottom: 10px;
+  }
+  footer .container .copy-socials .copy{
+    position: relative;
+    padding-left: 0;
   }
 }
 
