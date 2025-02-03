@@ -270,6 +270,7 @@ main {
     padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 50px
 }
 
 .content-container .about-container{
@@ -277,7 +278,8 @@ main {
     grid-template-rows: 1fr;
     grid-template-areas: 
     "about about prosoc"
-    "toolkit toolkit toolkit";
+    "toolkit toolkit toolkit"
+    "testi testi testi";
     gap: 30px;
     max-width: 1200px;
     justify-content: center;
@@ -298,14 +300,14 @@ main {
 }
 
 .widget {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 46px;
-    border-radius: 30px;
-    gap: 30px;
-    background-color: var(--primary-color);
-    border-bottom: 5px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 46px;
+  border-radius: 30px;
+  gap: 30px;
+  background-color: var(--primary-color);
+  border-bottom: 5px solid var(--accent-color);
 }
 
 .widget .titles {
@@ -387,7 +389,7 @@ main {
   object-fit: cover;
 }
 
-.yellow-and-contact .yellow-rect{
+.yellow-rect{
   width: 100%;
   height: 100%;
   background-color: var(--primary-color);
@@ -433,14 +435,14 @@ main {
   align-items: flex-start;
 }
 
-.widget.toolkit .section-header {
+.widget .section-header {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 20px;
 }
 
-.widget.toolkit .section-header .titles {
+.widget .section-header .titles {
   align-items: flex-start;
 }
 
@@ -492,13 +494,157 @@ main {
   object-fit: cover;
 }
 
+.testimonials-container {
+  grid-area: testi;
+}
+
+.widget.testimonials {
+  padding: 20px 50px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.widget.testimonials .section-header .icon{
+  background-color: var(--background-color);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.widget.testimonials .section-header .icon .testimonial-icon{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.widget.testimonials .testimonial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.widget.testimonials .testimonial-list .testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: var(--background-color);
+}
+
+.widget.testimonials .testimonial-list .testimonial .testimonial-text p{
+  font-size: 1.0em;
+  font-weight: 300;
+  line-height: 1.0em;
+  color: var(--text-color);
+}
+
+.widget.testimonials .testimonial-list .testimonial .testimonial-author h4{
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.2em;
+  color: var(--accent-color);
+}
+.widget.testimonials .testimonial-list .testimonial .testimonial-author h5{
+  font-size: 1.0em;
+  font-weight: 400;
+  line-height: 1.2em;
+  color: var(--text-color);
+}
+
+/* Desktop Footer */
+
+footer {
+  position: sticky;
+  top: 100vh;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  background-color: var(--primary-color);
+  border-top: 5px solid var(--accent-color);
+}
+footer .container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+}
+
+footer .container .navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer .container .navbar .menu {
+  display: flex;
+  align-items: center;
+  gap: 49px;
+  margin: 0;
+  padding: 0;
+}
+
+footer .container .navbar .menu li a{
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  padding: 26px 0;
+  color: var(--text-color);
+}
+
+footer .container .copy-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer .container .copy-socials .copy{
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--text-color);
+  position: absolute;
+  left: 0;
+  padding-left: 20px;
+}
+footer .container .socials {
+  grid-area: socials;
+  justify-self: start ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer .container .socials .icon{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
 /* Responsive */
 @media (max-width: 1170px) {
   .content-container .about-container{
     grid-template-areas: 
     "about"
     "prosoc"
-    "toolkit";
+    "toolkit"
+    "testi";
     gap: 20px, 30px;
   }
 }
@@ -515,6 +661,10 @@ main {
     padding: 30px;
   }
   .widget.toolkit {
+    padding: 20px 40px;
+  }
+  .widget.testimonials {
+    flex-direction: column;
     padding: 20px 40px;
   }
 }

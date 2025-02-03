@@ -12,61 +12,60 @@
 <body id="body">
     <div id="parallax-container" class="parallax-container"></div>
     <main>
-            <div class="main-container">
-                <header class="header-area">
-                    <div class="container">
-                        <div class="name">
-                            <a class="first-name">Jack</a>
-                            <a class="last-name">Carroll</a>
+        <div class="main-container">
+            <header class="header-area">
+                <div class="container">
+                    <div class="name">
+                        <a class="first-name">Jack</a>
+                        <a class="last-name">Carroll</a>
+                    </div>
+                    <!-- MOBILE HEADER -->
+                    <div class="mobile-header">
+                        <div class="off-screen-menu">
+                           <ul id="menu-main-menu" class="menu">
+                               <li class="menu-item active">
+                                   <a href="index.html">Home</a>
+                               </li>
+                               <li class="menu-item">
+                                   <a href="projects.html">Projects</a>
+                               </li>
+                               <li class="menu-item">
+                                   <a href="#about">About</a>
+                               </li>
+                               <li class="menu-item">
+                                   <a href="#contact">Contact</a>
+                               </li>
+                           </ul>
                         </div>
-                        <!-- MOBILE HEADER -->
-                        <div class="mobile-header">
-                            <div class="off-screen-menu">
-                               <ul id="menu-main-menu" class="menu">
-                                   <li class="menu-item active">
-                                       <a href="index.html">Home</a>
-                                   </li>
-                                   <li class="menu-item">
-                                       <a href="projects.html">Projects</a>
-                                   </li>
-                                   <li class="menu-item">
-                                       <a href="#about">About</a>
-                                   </li>
-                                   <li class="menu-item">
-                                       <a href="#contact">Contact</a>
-                                   </li>
-                               </ul>
-                            </div>
-                            <nav class="mobile-navbar">
-                               <div class="ham-menu">
-                                   <span></span>
-                                   <span></span>
-                                   <span></span>
-                               </div>
-                            </nav>
-                        </div>
-                        <!-- Desktop Navbar -->
-                        <nav class="navbar">
-                            <ul id="menu-main-menu" class="menu">
-                                <li class="menu-item active">
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="projects.html">Projects</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#about">About</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#contact">Contact</a>
-                                </li>
-                            </ul>
+                        <nav class="mobile-navbar">
+                           <div class="ham-menu">
+                               <span></span>
+                               <span></span>
+                               <span></span>
+                           </div>
                         </nav>
                     </div>
-                </header>
-
-                <!-- CONTENT -->
-                 <section class="content-container">
+                    <!-- Desktop Navbar -->
+                    <nav class="navbar">
+                        <ul id="menu-main-menu" class="menu">
+                            <li class="menu-item active">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="projects.html">Projects</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#about">About</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- CONTENT -->
+             <section class="content-container">
                     <!-- First Section -->
                     <div class="about-container">
                         <section id="about" class="widget about">
@@ -98,7 +97,7 @@
                                         <a href="https://www.github.com/jackscarroll" target="_blank">
                                             <img class="contact-icon" src="icons/github-mark-yellow.svg" alt="Github">
                                         </a>
-                                        <a href="jackcarrollcontact@gmail.com" target="_blank">
+                                        <a href="mailto:jackcarrollcontact@gmail.com" target="_blank">
                                             <img class="contact-icon" src="icons/email.svg" alt="Email">
                                         </a>
                                         <a href="https://www.linkedin.com/in/jack-carroll-079276217/" target="_blank">
@@ -261,8 +260,87 @@
                                 </div>
                             </div>
                         </section>
-                 </section>
-            </div>
+                     </div>
+                    <!-- Thrid Section -->
+                     <div class="testimonials-container">
+                        <section class="widget testimonials">
+                            <div class="section-header">
+                                <div class="icon">
+                                    <img class="testimonial-icon" src="icons/testimonial.svg" alt="Person Icon">
+                                </div>
+                                <div class="titles">
+                                    <h1 class="subtitle">What people say about me</h2>
+                                    <h1 class="title">Testimonials</h1>
+                                </div>
+                            </div>
+                            <div class="testimonial-list">
+                                <div class="testimonial">
+                                    <div class="testimonial-text">
+                                        <p>“I have no doubt that Jack’s adaptability, problem-solving skills, and collaborative approach will make him a
+                                            valuable asset to any team.”</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h4 class="author-name">Andrew Cain</h4>
+                                        <h5 class="author-title">Associate Head of School of IT - Deakin University</h5>
+                                    </div>
+                                </div>
+                                <div class="testimonial">
+                                    <div class="testimonial-text">
+                                        <p>“In my interactions with Jack, I’ve found that he is a dedicated, hardworking, and innovative
+                                            individual. Especially with his passion for computer systems and software.
+                                            Jack has a mature outlook on life and remains cool in stressful situations which would be a highly
+                                            valued trait within any organization.”</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h4 class="author-name">Adam Burger</h4>
+                                        <h5 class="author-title">General Manager - AME Systems (SEA)</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+             </section>
+
+             <!-- FOOTER -->
+             <footer>
+                <div class="container">
+                    <div class="name">
+                        <a class="first-name">Jack</a>
+                        <a class="last-name">Carroll</a>
+                    </div>
+                    <nav class="navbar">
+                        <ul class="menu">
+                            <li class="menu-item active">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="projects.html">Projects</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#about">About</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="copy-socials">
+                        <p class="copy">&copy; 2025 Jack Carroll</p>
+                        <div class="socials">
+                            <a href="https://www.github.com/jackscarroll" target="_blank">
+                                <img class="icon" src="icons/github-mark-yellow.svg" alt="Github Icon">
+                            </a>
+                            <a href="mailto:jackcarrollcontact@gmail.com" target="_blank">
+                                <img class="icon" src="icons/email.svg" alt="Email Icon">
+                            </a>
+                            <a href="https://www.linkedin.com/in/jack-carroll-1b1b3b1b3/" target="_blank">
+                                <img class="icon" src="icons/linkedin.svg" alt="LinkedIn Icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+             </footer>
+        </div>
     </main>
     <script src="scripts.js"></script>
 </body>
