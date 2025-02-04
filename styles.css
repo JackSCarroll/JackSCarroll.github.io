@@ -75,6 +75,11 @@ body {
     background-color: var(--primary-color);
 }
 
+body.first-load{
+  animation: fadeIn 1.2s ease forwards;
+  transition: #22232e 0.3s ease, color 0.3s ease;
+}
+
 a {
     color: #000000;
     text-decoration: none;
@@ -110,7 +115,6 @@ main {
   margin-bottom: auto;
   z-index: 1;
 }
-
 .main-container {
   height: 100vh;
 }

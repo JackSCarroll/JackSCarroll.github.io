@@ -1,6 +1,11 @@
  const swup = new Swup(); 
 
  function initializeEventListeners() {
+    // FIRST LOAD ANIMATION
+    const firstLoad = document.getElementById('body');
+    window.onload = function() {D
+        setTimeout(firstLoad.classList.remove('first-load'), 1000);
+    }
      //
      // Background Parallax Logic
      //
@@ -12,9 +17,6 @@
              parallaxContainer.style.backgroundPosition = `${moveX}px ${moveY}px`;
          });
      }
- 
-     const html = document.documentElement;
-     html.classList.remove('is-animating');
  
      //
      // Mobile Hamburger Menu Logic
