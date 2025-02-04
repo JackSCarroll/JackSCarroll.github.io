@@ -73,8 +73,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--primary-color);
-    animation: fadeIn 1.2s ease forwards;
-    transition: #f0f2f5 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -108,6 +106,8 @@ ul {
 
 main {
   position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
   z-index: 1;
 }
 
@@ -704,55 +704,6 @@ footer .container .socials .icon{
 }
 
 /* Keyframes */
-
-/* Blinker animation */
-@keyframes blinker {
-    0% {
-        opacity: 1;
-    }
-    49% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* Error Shake */
-@keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-  
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  }
-  
-.apply-shake {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-/* Typing animation */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
 
 /* Fade in animation */
 @keyframes fadeIn {
