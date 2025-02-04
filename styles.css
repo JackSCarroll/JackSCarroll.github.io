@@ -570,9 +570,8 @@ main {
 footer {
   position: sticky;
   top: 100vh;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: auto;
+  left: auto;
   margin-top: auto;
   padding-top: 40px;
   padding-bottom: 24px;
