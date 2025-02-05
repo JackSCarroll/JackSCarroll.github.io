@@ -257,6 +257,12 @@ main {
   display: block;
   padding: 26px 0;
   color: var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-area .navbar .menu li a:hover{
+  color: var(--accent-color);
+  transform: scale(1.1);
 }
 
 .header-area .navbar .menu li.active a{
@@ -364,6 +370,11 @@ main {
 .widget.projects {
   grid-area: projects;
   flex-direction: column;
+  transition: transform 0.3 ease;
+}
+
+.widget.projects:hover {
+  transform: scale(1.1);
 }
 
 .project-contact .image {
@@ -427,6 +438,10 @@ main {
   width: 50px;
   height: 50px;
   object-fit: cover;
+  transition: all 0.3s ease-out;
+}
+.widget.contact .icon .contact-icon:hover{
+  transform: scale(1.1);
 }
 
 .toolkit-container{
@@ -608,6 +623,14 @@ footer .container .navbar .menu li a{
   display: block;
   padding: 26px 0;
   color: var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+footer .container .navbar .menu li a:hover{
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+footer .container .navbar .menu li.active a{
+  color: var(--accent-color);
 }
 
 footer .container .copy-socials {
@@ -636,7 +659,14 @@ footer .container .socials .icon{
   width: 20px;
   height: 20px;
   object-fit: cover;
+  transition: all 0.3s ease-out;
 }
+
+footer .container .socials .icon:hover{
+  transform: scale(1.5);
+}
+
+
 
 /* Responsive */
 @media (max-width: 1170px) {

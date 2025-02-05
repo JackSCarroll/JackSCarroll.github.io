@@ -46,10 +46,6 @@ html.is-changing .transition-main {
   html.is-rendering .transition-overlay {
     transform: translate3d(0, calc(var(--overlay-direction, 1) * 100%), 0);
   }
-  
-  html.to-back {
-    /* --overlay-direction: -1; */
-  }
 
   /* Widget Zooms */
   .content-container .widget {
