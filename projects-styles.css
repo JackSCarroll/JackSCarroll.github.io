@@ -73,6 +73,7 @@
 }
 .projects-container .projects .project .project-info .project-description {
     font-size: 1em;
+    line-height: 1.5em;
     color: var(--text-color);
     text-align: justify;
 }
@@ -104,7 +105,7 @@
     }
 }
 
-.projects-container .projects .project .project-images .modal {
+.projects-container .projects .modal {
     display: none;
     position: fixed;
     z-index: 1002;
@@ -121,18 +122,19 @@
     justify-content: center;
 }
 
-.projects-container .projects .project .project-images .modal-content {
+.projects-container .projects .modal-content {
     margin: auto;
     display: block;
 }
-.projects-container .projects .project .project-images .modal-image {
+.projects-container .projects .modal-image {
     margin: auto;
     display: block;
     width: 100%;
     max-width: calc(100vw * 0.80);
+    border-radius: 5px;
 }
 
-.projects-container .projects .project .project-images #caption {
+.projects-container .projects .modal #caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -142,7 +144,7 @@
     padding: 10px 0;
     height: 150px;
   }
-.projects-container .projects .project .project-images .modal-content, #caption {
+.projects-container .projects .modal-content, #caption {
     animation-name: zoom;
     animation-duration: 0.6s;
   }
@@ -152,7 +154,7 @@
   to {transform:scale(1)}
 }
   
-.projects-container .projects .project .project-images .modal .close {
+.projects-container .projects .modal .close {
     position: absolute;
     top: 15px;
     right: 35px;
