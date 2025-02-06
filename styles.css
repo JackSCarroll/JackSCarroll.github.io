@@ -55,6 +55,7 @@
 :root {
   --background-color: #22232e;
   --accent-color: #fcdf59;
+  --accent-color-rgb: 252, 223, 89;
   --primary-color: #292a38;
   --text-color: #f8f8f4;
   --highlight-color: rgba(224, 224, 224, 0.05);
@@ -371,10 +372,9 @@ main {
   grid-area: projects;
   flex-direction: column;
   transition: transform 0.3 ease;
-}
-
-.widget.projects:hover {
-  transform: scale(1.1);
+  &:hover{
+    transform: scale(1.1);
+  }
 }
 
 .project-contact .image {
@@ -439,9 +439,9 @@ main {
   height: 50px;
   object-fit: cover;
   transition: all 0.3s ease-out;
-}
-.widget.contact .icon .contact-icon:hover{
-  transform: scale(1.1);
+  &:hover{
+    transform: scale(1.1);
+  }
 }
 
 .toolkit-container{
@@ -624,11 +624,12 @@ footer .container .navbar .menu li a{
   padding: 26px 0;
   color: var(--text-color);
   transition: color 0.3s ease, transform 0.3s ease;
+  &:hover{
+    color: var(--accent-color);
+    transform: scale(1.1);
+  }
 }
-footer .container .navbar .menu li a:hover{
-  color: var(--accent-color);
-  transform: scale(1.1);
-}
+
 footer .container .navbar .menu li.active a{
   color: var(--accent-color);
 }
@@ -660,10 +661,9 @@ footer .container .socials .icon{
   height: 20px;
   object-fit: cover;
   transition: all 0.3s ease-out;
-}
-
-footer .container .socials .icon:hover{
-  transform: scale(1.5);
+  &:hover{
+    transform: scale(1.5);
+  }
 }
 
 
