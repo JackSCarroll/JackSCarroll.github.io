@@ -213,6 +213,7 @@ main {
 .name {
   margin: 0;
   padding-inline: 20px;
+  cursor: pointer;
 }
 
 .first-name{

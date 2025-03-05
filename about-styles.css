@@ -1,0 +1,20 @@
+#about-page {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-page .widget.about{
+    &:hover {
+        transform: scale(1);
+    }
+}
+
+#about-page spacer {
+    display: inline;
+    padding-top: 10px;
+    margin-left: 50px;
+}
+#about-page .widget.about p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
